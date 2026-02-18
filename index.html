@@ -18,10 +18,55 @@
     nav a { color: white; font-weight: 600; transition: color 0.3s; }
     nav a:hover { color: #FFD700; }
 
-    /* --- Hero --- */
-    .hero { background: url('https://source.unsplash.com/1600x600/?students,statistics') center/cover no-repeat; color: white; text-align: center; padding: 120px 20px; }
-    .hero h2 { font-size: 2em; margin-bottom: 20px; }
-    .hero button { background: #FFD700; border: none; padding: 12px 25px; font-weight: bold; cursor: pointer; border-radius: 5px; }
+    /* --- Hero Section --- */
+    .hero {
+      position: relative;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('https://source.unsplash.com/1600x600/?students,statistics') center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.5); /* dark overlay */
+      padding: 40px 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background: #FFD700;
+      border: none;
+      padding: 12px 25px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: transform 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2em; }
+      .hero p { font-size: 1.1em; }
+    }
 
     /* --- Sections --- */
     section { padding: 80px 20px; max-width: 1200px; margin: auto; }
@@ -30,7 +75,7 @@
     /* --- About --- */
     .about p { max-width: 700px; margin: auto; font-size: 1.1em; }
 
-    /* --- Cards (Events / News / Officers) --- */
+    /* --- Cards (Officers) --- */
     .cards { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px; }
     .card { background: #f4f4f4; padding: 20px; border-radius: 8px; text-align: center; transition: transform 0.3s; }
     .card:hover { transform: translateY(-5px); }
@@ -68,23 +113,20 @@
   </div>
 </section>
 
- 
-
 <!-- About Section -->
 <section id="about" class="about">
   <h2>About Us</h2>
   <p>The ASA at UCSD is dedicated to fostering a community of students passionate about statistics, data science, and professional development. We host workshops, speaker events, and social activities to connect students with like-minded peers.</p>
 </section>
 
-<!-- Events Section -->
+<!-- Events Section with Google Calendar -->
 <section id="events">
   <h2>Upcoming Events</h2>
   <div style="display: flex; justify-content: center;">
     <iframe src="https://calendar.google.com/calendar/embed?src=amstatstudents%40ucsd.edu&ctz=America%2FLos_Angeles" 
-      style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
   </div>
 </section>
-
 
 <!-- Officers Section -->
 <section id="officers">
@@ -121,8 +163,8 @@
 <!-- Contact Section -->
 <section id="contact" class="contact">
   <h2>Contact Us</h2>
-  <p>Email: <a href="mailto:asa@ucsd.edu">asa@ucsd.edu</a></p>
-  <p>Follow us on <a href="#">Instagram</a> and <a href="#">LinkedIn</a></p>
+  <p>Email: <a href="mailto:asa@ucsd.edu">amstatstudents@ucsd.edu</a></p>
+  <p>Follow us on <a href="#">Instagram</a></p>
 </section>
 
 <!-- Footer -->
